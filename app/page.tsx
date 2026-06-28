@@ -1,6 +1,7 @@
 import { ArrowRight, FileSpreadsheet, LockKeyhole, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { PublicAdSlot } from "@/adapters/ads/PublicAdSlot";
+import { Logo } from "@/components/Logo";
 import { seoPages } from "@/content/seo/pages";
 
 export default function HomePage() {
@@ -8,6 +9,9 @@ export default function HomePage() {
     <main className="page">
       <section className="hero">
         <div>
+          <div className="hero-brand">
+            <Logo href={null} />
+          </div>
           <h1>Financial Statement PDF to Excel</h1>
           <p>
             Convert bank and credit card statement PDFs into Excel files with a self-hosted server-side engine. Text PDFs use table extraction, and scanned PDFs fall back to OCR.

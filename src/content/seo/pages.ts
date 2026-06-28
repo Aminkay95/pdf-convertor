@@ -4,6 +4,8 @@ export type SeoPage = {
   description: string;
   summary: string;
   expectation: string;
+  pageType?: "landing" | "policy";
+  ctaLabel?: string;
   sections: Array<{
     heading: string;
     body: string;
@@ -121,6 +123,176 @@ export const seoPages: SeoPage[] = [
       { heading: "No ad data", body: "Files, passwords, extracted rows, and preview edits are not shared with advertising systems." },
       { heading: "Receipt", body: "The privacy receipt distinguishes local processing from server OCR processing." },
       { heading: "No storage product", body: "The v1 app does not create accounts, saved document history, or long-term storage." }
+    ]
+  },
+  {
+    slug: "privacy-policy",
+    title: "Privacy Policy",
+    description:
+      "How this PDF converter handles uploaded files, extracted rows, passwords, analytics, advertising, and contact information.",
+    summary: "Privacy details for users and advertising review.",
+    expectation:
+      "This policy is written for the current no-account converter. Review it with counsel before relying on it as legal advice.",
+    pageType: "policy",
+    sections: [
+      {
+        heading: "Information we process",
+        body:
+          "When you use the converter, you may provide PDF files, optional PDF passwords, extracted table data, edited preview rows, export preferences, and basic technical information such as browser type, device information, IP address, and request timing."
+      },
+      {
+        heading: "How files are handled",
+        body:
+          "Files are processed only to provide the conversion requested by the user. The application does not offer user accounts, saved document history, or long-term document storage. Temporary server-side processing files are intended to be removed after conversion finishes."
+      },
+      {
+        heading: "Passwords",
+        body:
+          "If a PDF password is needed, it is used only to attempt to open the current document for conversion. The product is designed not to store PDF passwords."
+      },
+      {
+        heading: "Analytics and advertising",
+        body:
+          "Public pages may use privacy-conscious analytics or advertising after launch. Uploaded files, passwords, extracted rows, and preview edits should not be sent to advertising systems."
+      },
+      {
+        heading: "Contact information",
+        body:
+          "If you contact us, we use the information you provide to respond to your request, troubleshoot issues, and improve the service."
+      },
+      {
+        heading: "Your choices",
+        body:
+          "You can stop using the converter at any time, avoid uploading sensitive documents, and contact the site owner to ask questions about privacy or data handling."
+      }
+    ]
+  },
+  {
+    slug: "terms",
+    title: "Terms of Use",
+    description:
+      "The rules for using this PDF converter, including acceptable use, no financial advice, availability, and user responsibility.",
+    summary: "Use rules and service limitations.",
+    expectation:
+      "These terms are a practical launch baseline, not a substitute for legal advice.",
+    pageType: "policy",
+    sections: [
+      {
+        heading: "Use of the service",
+        body:
+          "You may use the converter to process documents that you own or are authorized to process. You are responsible for reviewing the converted output before relying on it."
+      },
+      {
+        heading: "No financial advice",
+        body:
+          "The converter is a document utility. It does not provide bookkeeping, tax, investment, legal, or financial advice."
+      },
+      {
+        heading: "Acceptable use",
+        body:
+          "Do not use the service to process documents unlawfully, attack the service, bypass security controls, overload the infrastructure, or upload malware or harmful content."
+      },
+      {
+        heading: "Accuracy",
+        body:
+          "PDF extraction and OCR can make mistakes. You should verify all rows, amounts, dates, labels, and formulas before using exported files."
+      },
+      {
+        heading: "Availability",
+        body:
+          "The service may change, pause, or stop at any time. We are not responsible for losses caused by downtime, conversion errors, or unsupported document formats."
+      },
+      {
+        heading: "Changes",
+        body:
+          "These terms may be updated as the product, hosting, analytics, advertising, or support processes change."
+      }
+    ]
+  },
+  {
+    slug: "contact",
+    title: "Contact",
+    description:
+      "Contact the site owner about privacy, support, corrections, advertising review, or document conversion issues.",
+    summary: "Support and site-owner contact information.",
+    expectation:
+      "Use a working support address before applying to AdSense so reviewers and users can reach the site owner.",
+    pageType: "policy",
+    sections: [
+      {
+        heading: "Support",
+        body:
+          "For help with conversion issues, include the type of PDF, whether it was scanned or digital, and what output you expected. Do not email sensitive bank statements unless explicitly requested through a secure support process."
+      },
+      {
+        heading: "Privacy requests",
+        body:
+          "For privacy questions or data-handling concerns, use the support email shown on this page."
+      },
+      {
+        heading: "Advertising and policy",
+        body:
+          "For advertising, content, or site policy questions, use the support email shown on this page."
+      }
+    ]
+  },
+  {
+    slug: "about",
+    title: "About",
+    description:
+      "A focused PDF conversion utility for turning bank and credit card statement PDFs into reviewed Excel or CSV files.",
+    summary: "What the converter does and does not do.",
+    expectation:
+      "This page helps reviewers understand the site purpose before AdSense approval.",
+    pageType: "policy",
+    sections: [
+      {
+        heading: "Purpose",
+        body:
+          "This site helps users convert financial statement PDFs into editable spreadsheets for review, cleanup, and personal workflow use."
+      },
+      {
+        heading: "Scope",
+        body:
+          "The product focuses on conversion and export. It does not replace accounting software, reconciliation tools, tax preparation, or professional advice."
+      },
+      {
+        heading: "Review-first workflow",
+        body:
+          "Users are expected to inspect extracted rows and correct mistakes before downloading Excel or CSV files."
+      }
+    ]
+  },
+  {
+    slug: "cookie-policy",
+    title: "Cookie Policy",
+    description:
+      "How cookies and similar technologies may be used for core functionality, analytics, and advertising on public pages.",
+    summary: "Cookie and similar technology disclosure.",
+    expectation:
+      "Update this page when you add a real analytics or advertising provider configuration.",
+    pageType: "policy",
+    sections: [
+      {
+        heading: "Essential technologies",
+        body:
+          "The site may use essential browser storage or request data to keep the converter working, maintain security, and remember basic interface state."
+      },
+      {
+        heading: "Analytics",
+        body:
+          "Analytics may be used to understand public page performance and product usage patterns. Analytics should not receive uploaded files, passwords, extracted rows, or preview edits."
+      },
+      {
+        heading: "Advertising",
+        body:
+          "If advertising is enabled, ad providers may use cookies or similar technologies on public pages according to their own policies and user controls."
+      },
+      {
+        heading: "Controls",
+        body:
+          "You can manage cookies through your browser settings. Blocking some technologies may affect site functionality."
+      }
     ]
   }
 ];
