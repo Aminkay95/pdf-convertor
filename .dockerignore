@@ -1,0 +1,9 @@
+node_modules
+.next
+npm-debug.log
+.git
+_bmad-output
+_bmad
+.agents
+docs
+converter-service
