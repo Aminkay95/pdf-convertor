@@ -14,3 +14,13 @@ export function getSupportEmail(): string {
 
   return `support@${hostname}`;
 }
+
+export function getGoogleAdsenseClient(): string | null {
+  const client = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT?.trim();
+  return client && /^ca-pub-\d+$/.test(client) ? client : null;
+}
+
+export function getGoogleAdsenseSlot(): string | null {
+  const slot = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_SLOT?.trim();
+  return slot && /^\d+$/.test(slot) ? slot : null;
+}

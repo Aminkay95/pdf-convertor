@@ -39,6 +39,17 @@ docker compose up --build
 
 Open `http://localhost:3000/converter`.
 
+## AdSense
+
+Set these environment variables in production when Google gives you the IDs:
+
+```bash
+NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT=ca-pub-0000000000000000
+NEXT_PUBLIC_GOOGLE_ADSENSE_SLOT=0000000000
+```
+
+The app only renders ad slots on public content pages. The converter workflow stays free of ad containers and does not pass uploaded files, passwords, extracted rows, or preview edits to advertising code.
+
 ## Converter engine
 
 Docker Compose starts two services:
