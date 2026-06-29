@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import { Logo } from "@/components/Logo";
 import { getGoogleAdsenseClient, getSiteUrl } from "@/content/site";
 import "./globals.css";
@@ -20,15 +19,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en">
-      <body>
+      <head>
         {adsenseClient ? (
-          <Script
-            async
-            crossOrigin="anonymous"
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
-            strategy="beforeInteractive"
-          />
+          <>
+            <meta name="google-adsense-account" content={adsenseClient} />
+            <script
+              async
+              crossOrigin="anonymous"
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
+            />
+          </>
         ) : null}
+      </head>
+      <body>
         <header className="site-header">
           <nav className="nav" aria-label="Primary navigation">
             <Logo />
