@@ -129,41 +129,61 @@ export const seoPages: SeoPage[] = [
     slug: "privacy-policy",
     title: "Privacy Policy",
     description:
-      "How this PDF converter handles uploaded files, extracted rows, passwords, analytics, advertising, and contact information.",
-    summary: "Privacy details for users and advertising review.",
+      "A general privacy policy explaining what information may be collected, how it may be used, and the choices available to users.",
+    summary: "General privacy policy.",
     expectation:
-      "This policy is written for the current no-account converter. Review it with counsel before relying on it as legal advice.",
+      "This boilerplate privacy policy is provided for general information and should be reviewed before public launch.",
     pageType: "policy",
     sections: [
       {
-        heading: "Information we process",
+        heading: "Information we collect",
         body:
-          "When you use the converter, you may provide PDF files, optional PDF passwords, extracted table data, edited preview rows, export preferences, and basic technical information such as browser type, device information, IP address, and request timing."
+          "We may collect information you provide directly, information generated when you use the site, and basic technical information such as browser type, device type, IP address, pages visited, referring pages, and approximate usage times."
       },
       {
-        heading: "How files are handled",
+        heading: "How we use information",
         body:
-          "Files are processed only to provide the conversion requested by the user. The application does not offer user accounts, saved document history, or long-term document storage. Temporary server-side processing files are intended to be removed after conversion finishes."
+          "We may use information to provide and maintain the service, respond to requests, improve site performance, monitor security, prevent misuse, understand usage trends, and comply with legal obligations."
       },
       {
-        heading: "Passwords",
+        heading: "Files and user content",
         body:
-          "If a PDF password is needed, it is used only to attempt to open the current document for conversion. The product is designed not to store PDF passwords."
+          "If you upload or provide files or other content, that content is used to deliver the requested service. You are responsible for making sure you have the right to submit any content you provide."
       },
       {
-        heading: "Analytics and advertising",
+        heading: "Cookies and similar technologies",
         body:
-          "Public pages may use privacy-conscious analytics or advertising after launch. Uploaded files, passwords, extracted rows, and preview edits should not be sent to advertising systems."
+          "We may use cookies, local storage, analytics tools, or similar technologies to operate the site, remember preferences, measure usage, and support advertising or affiliate features where enabled."
       },
       {
-        heading: "Contact information",
+        heading: "Sharing information",
         body:
-          "If you contact us, we use the information you provide to respond to your request, troubleshoot issues, and improve the service."
+          "We do not sell personal information. We may share information with service providers who help operate the site, when required by law, to protect rights and safety, or as part of a business transfer such as a merger or acquisition."
       },
       {
-        heading: "Your choices",
+        heading: "Data retention",
         body:
-          "You can stop using the converter at any time, avoid uploading sensitive documents, and contact the site owner to ask questions about privacy or data handling."
+          "We keep information only for as long as reasonably necessary for the purposes described in this policy, unless a longer retention period is required or permitted by law."
+      },
+      {
+        heading: "Your privacy choices",
+        body:
+          "You may stop using the site, adjust browser cookie settings, avoid submitting sensitive information, and contact us to ask about access, correction, deletion, or other privacy requests available under applicable law."
+      },
+      {
+        heading: "Children's privacy",
+        body:
+          "The service is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided information, contact us so we can review and respond."
+      },
+      {
+        heading: "Changes to this policy",
+        body:
+          "We may update this policy from time to time. Changes will be posted on this page with the updated version taking effect when published unless otherwise stated."
+      },
+      {
+        heading: "Contact us",
+        body:
+          "If you have questions about this privacy policy or how information is handled, contact the site owner using the contact information provided on the site."
       }
     ]
   },
