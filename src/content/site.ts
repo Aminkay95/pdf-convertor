@@ -1,3 +1,5 @@
+const DEFAULT_GOOGLE_ADSENSE_CLIENT = "ca-pub-4492647116667761";
+
 export function getSiteUrl(): string {
   return (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
 }
@@ -16,7 +18,7 @@ export function getSupportEmail(): string {
 }
 
 export function getGoogleAdsenseClient(): string | null {
-  const client = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT?.trim();
+  const client = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT?.trim() || DEFAULT_GOOGLE_ADSENSE_CLIENT;
   return client && /^ca-pub-\d+$/.test(client) ? client : null;
 }
 
